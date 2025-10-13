@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package streaming;
+
+option go_package = "megareds/mediahub/api/proto/streaming";
+
+service StreamingService {
+      rpc GetStream(GetStreamRequest) returns (GetStreamResponse);
+}
+
+message GetStreamRequest {
+      string video_id = 1;
+}
+
+message GetStreamResponse {
+      string video_id = 1;
+      string stream_url = 2;
+}

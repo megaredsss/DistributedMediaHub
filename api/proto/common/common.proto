@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package common;
+
+option go_package = "megareds/mediahub/api/proto/common";
+
+message Status {
+      bool success = 1;
+      string message = 2;
+      int32 code = 3;
+}
+
+message ErrorDetails {
+      string code = 1;
+      string message = 2;
+      map<string, string> details = 3;
+}
+
+message Pagination {
+      int32 page = 1;
+      int32 page_size = 2;
+      int64 total = 3;
+      int32 total_pages = 4;
+}
+
+message PaginationRequest {
+      int32 page = 1;
+      int32 page_size = 2;
+}
+
+message Timestamps {
+      int64 created_at = 1;
+      int64 updated_at = 2;
+      int64 deleted_at = 3;
+}
+
+message FileMetadata {
+      string filename = 1;
+      string content_type = 2;
+      int64 size = 3;
+      string hash = 4;
+}
+
+
+enum EntityStatus {
+      ENTITY_STATUS_UNKNOWN = 0;
+      ENTITY_STATUS_ACTIVE = 1;
+      ENTITY_STATUS_INACTIVE = 2;
+      ENTITY_STATUS_PENDING = 3;
+      ENTITY_STATUS_DELETED = 4;
+}
+
+enum Priority {
+      PRIORITY_UNKNOWN = 0;
+      PRIORITY_LOW = 1;
+      PRIORITY_MEDIUM = 2;
+      PRIORITY_HIGH = 3;
+      PRIORITY_CRITICAL = 4;
+}
+
+enum ProcessingStatus {
+      PROCESSING_STATUS_UNKNOWN = 0;
+      PROCESSING_STATUS_QUEUED = 1;
+      PROCESSING_STATUS_PROCESSING = 2;
+      PROCESSING_STATUS_COMPLETED = 3;
+      PROCESSING_STATUS_FAILED = 4;
+      PROCESSING_STATUS_CANCELLED = 5;
+}

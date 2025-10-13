@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package upload;
+
+option go_package = "megareds/mediahub/api/proto/upload";
+
+service UploadService {
+      rpc UploadFile(UploadFileRequest) returns (UploadFileResponse);
+}
+
+message UploadFileRequest {
+      string file_path = 1;
+}
+
+message UploadFileResponse {
+      string file_path = 1;
+}

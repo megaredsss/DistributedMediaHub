@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package video;
+
+option go_package = "megareds/mediahub/api/proto/video";
+
+service VideoService {
+      rpc GetVideo(GetVideoRequest) returns (GetVideoResponse);
+}
+
+message GetVideoRequest {
+      string video_id = 1;
+}
+
+message GetVideoResponse {
+      string video_id = 1;
+      string title = 2;
+      string description = 3;
+}
