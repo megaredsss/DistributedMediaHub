@@ -363,3 +363,8 @@ project_structure.txt
 
 # Docs Files
 docs/architecture
+
+# Config Files
+configs/dev/config.yaml
+configs/prod/config.yaml
+configs/staging/config.yaml
