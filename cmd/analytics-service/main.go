@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/yourusername/DistributedMediaHub/internal/config"
+	"github.com/yourusername/DistributedMediaHub/internal/analytics-service/config"
 )
 
 func main() {

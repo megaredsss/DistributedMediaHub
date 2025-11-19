@@ -261,6 +261,11 @@ mocks/
 # Swagger generated
 api/openapi/generated/
 
+# SQLC generated files (uncommit if you want to commit generated code)
+internal/*/repository/sqlc/
+**/repository/sqlc/*.go
+!**/repository/sqlc/.gitkeep
+
 # ========================================
 # Temporary files
 # ========================================
