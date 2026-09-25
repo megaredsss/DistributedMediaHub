@@ -100,22 +100,6 @@ redis-data/
 *.swo
 *~
 
-# Emacs
-*~
-\#*\#
-.\#*
-
-
-
-# ========================================
-# OS
-# ========================================
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
-
 # Windows
 Thumbs.db
 Thumbs.db:encryptable
@@ -373,3 +357,6 @@ docs/architecture
 configs/dev/config.yaml
 configs/prod/config.yaml
 configs/staging/config.yaml
+
+.github/workflows/ci.yml
+.github/workflows/cd.yml
