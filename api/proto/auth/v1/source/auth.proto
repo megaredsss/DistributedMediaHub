@@ -10,9 +10,6 @@ service AuthService {
     rpc Logout(LogoutRequest) returns (LogoutResponse);
     rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse);
     rpc VerifyToken(VerifyTokenRequest) returns (VerifyTokenResponse);
-    rpc GetUser(GetUserRequest) returns (GetUserResponse);
-    rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
-    rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);     
 }
 
 message RegisterRequest {
@@ -23,7 +20,7 @@ message RegisterRequest {
 
 message RegisterResponse {
       string user_id = 1;
-      string access_token = 1;
+      string access_token = 2;
       string refresh_token = 3;
       string email = 4;
       string username = 5;
@@ -71,6 +68,13 @@ message RefreshTokenResponse {
 }
 
 message VerifyTokenRequest {
+      string user_id = 1;
+      string access_token = 2;
+      string refresh_token = 3;
+      string session_id = 4;
+}
+
+message VerifyTokenResponse{
       string user_id = 1;
       string access_token = 2;
       string refresh_token = 3;

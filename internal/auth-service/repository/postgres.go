@@ -1,4 +1,4 @@
-package repository
+package authrepository
 
 type AuthRepository interface {
 	// Define methods for the AuthRepository here
